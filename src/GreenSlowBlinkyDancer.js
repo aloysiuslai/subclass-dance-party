@@ -1,6 +1,6 @@
 var GreenSlowBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.addClass('makeGreenSlowBlinkyDancer')
+  this.$node = $('<span class="GreenBlinkyDancer"></span>');
 }
 
 GreenSlowBlinkyDancer.prototype.step = function() {
@@ -9,7 +9,7 @@ GreenSlowBlinkyDancer.prototype.step = function() {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.slideUp();
+  this.$node.toggle();
 };
 
 
